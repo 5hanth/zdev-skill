@@ -5,7 +5,7 @@ Use `zdev` to manage isolated development environments when working on features.
 ## Prerequisites
 
 - `zdev` CLI installed (`bunx zdev` or `bun add -g zdev`)
-- Project must use Convex backend + Vite frontend
+- Vite-based frontend project (Convex backend is optional, auto-detected)
 
 ## Before Starting Any Feature
 
