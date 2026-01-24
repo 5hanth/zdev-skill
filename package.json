@@ -1,0 +1,23 @@
+{
+  "name": "zdev-skill",
+  "version": "0.1.0",
+  "description": "Agent skill for zdev - multi-agent worktree development",
+  "license": "WTFPL",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/5hanth/zdev-skill"
+  },
+  "keywords": [
+    "clawdbot",
+    "agent",
+    "skill",
+    "zdev",
+    "worktree",
+    "convex",
+    "vite"
+  ],
+  "files": [
+    "SKILL.md",
+    "README.md"
+  ]
+}
