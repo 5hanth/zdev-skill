@@ -7,6 +7,21 @@ Use `zdev` to manage isolated development environments when working on features.
 - `zdev` CLI installed (`bunx zdev` or `bun add -g zdev`)
 - Vite-based frontend project (Convex backend is optional, auto-detected)
 
+## Creating a New Project
+
+```bash
+# Basic TanStack Start project
+zdev create my-app
+
+# With Convex backend
+zdev create my-app --convex
+
+# Flat structure (no monorepo)
+zdev create my-app --flat
+```
+
+After creation, follow the printed instructions to complete setup.
+
 ## Before Starting Any Feature
 
 ```bash
