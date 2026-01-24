@@ -35,19 +35,19 @@ Copy the contents of [SKILL.md](./SKILL.md) into your agent's system prompt or c
 Once installed, prompt your agent:
 
 ```
-Create a new TanStack Start project called my-app with Convex backend.
+Use zdev to create a new TanStack Start project called my-app with Convex backend.
 ```
 
 ```
-Start a feature branch called add-auth for the project at ./my-project
+Use zdev to start a worktree for add-auth feature on ./my-project
 ```
 
 ```
-Show me what zdev worktrees are currently running.
+Run zdev list to show what's currently running.
 ```
 
 ```
-Clean up the feature branch after the PR is merged.
+Use zdev clean to remove the add-auth worktree after the PR is merged.
 ```
 
 ## What the Agent Learns
