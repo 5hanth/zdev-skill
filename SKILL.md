@@ -20,9 +20,28 @@ zdev create my-app --convex
 zdev create my-app --flat
 ```
 
-After creation, follow the printed instructions to complete setup.
+Creates:
+- TanStack Start app with clean routes
+- `.zdev/setup.sh` for worktree setup
+- Agentation for UI feedback (dev only)
 
-The project includes `.zdev/setup.sh` which runs after worktree creation. Edit it to customize package manager or add setup commands.
+## Initializing an Existing Project
+
+```bash
+zdev init /path/to/project
+```
+
+Creates `.zdev/project.json` with project metadata.
+
+## Configuration
+
+First-time setup (or to change settings):
+
+```bash
+zdev config --set devDomain=dev.example.com
+zdev config --set traefikConfigDir=/etc/traefik/dynamic
+zdev config --list
+```
 
 ## Before Starting Any Feature
 
@@ -42,8 +61,11 @@ zdev start <feature-name> -p /path/to/project
 # Start without public URL (local only)
 zdev start <feature-name> -p /path/to/project --local
 
-# Start with seed data
+# Start with seed data (Convex projects)
 zdev start <feature-name> -p /path/to/project --seed
+
+# Use different base branch
+zdev start <feature-name> -p /path/to/project --base-branch main
 ```
 
 After starting:
@@ -58,7 +80,7 @@ After starting:
 You're in an isolated git worktree with its own:
 - Branch (`feature/<name>`)
 - Node modules
-- Convex dev instance
+- Convex dev instance (if applicable)
 - Port allocation
 
 Work normally. Commit often. Push when ready for review.
@@ -104,6 +126,9 @@ This removes the worktree, Traefik route, and port allocation.
 
 | Task | Command |
 |------|---------|
+| Create new project | `zdev create NAME` |
+| Init existing project | `zdev init PATH` |
+| Configure | `zdev config --list` |
 | See what's running | `zdev list` |
 | Start feature | `zdev start NAME -p PATH` |
 | Stop (keep files) | `zdev stop NAME -p PATH --keep` |
@@ -114,8 +139,10 @@ This removes the worktree, Traefik route, and port allocation.
 
 **"Feature already exists"** → It's already running. Use `zdev list` to find the worktree path.
 
+**"Failed to create worktree: invalid reference"** → Use `--base-branch master` or the correct branch name.
+
 **Port conflict** → Specify a port: `zdev start NAME --port 5200`
 
-**No public URL** → Either use `--local` or ensure Traefik is configured.
+**No public URL** → Run `zdev config --set devDomain=dev.example.com` first.
 
 **Convex not working** → Run `bunx convex dev` once in the main project first to select a Convex project.
