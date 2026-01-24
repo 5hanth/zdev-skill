@@ -22,6 +22,8 @@ zdev create my-app --flat
 
 After creation, follow the printed instructions to complete setup.
 
+The project includes `.zdev/setup.sh` which runs after worktree creation. Edit it to customize package manager or add setup commands.
+
 ## Before Starting Any Feature
 
 ```bash
@@ -45,10 +47,11 @@ zdev start <feature-name> -p /path/to/project --seed
 ```
 
 After starting:
-1. Note the worktree path (e.g., `~/.zdev/worktrees/project-feature`)
-2. Note the local URL (e.g., `http://localhost:5173`)
-3. Note the public URL if available (e.g., `https://project-feature.dev.example.com`)
-4. `cd` to the worktree path to begin work
+1. `.zdev/setup.sh` runs automatically (installs deps, etc.)
+2. Note the worktree path (e.g., `~/.zdev/worktrees/project-feature`)
+3. Note the local URL (e.g., `http://localhost:5173`)
+4. Note the public URL if available (e.g., `https://project-feature.dev.example.com`)
+5. `cd` to the worktree path to begin work
 
 ## While Working
 
