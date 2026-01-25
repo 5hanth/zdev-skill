@@ -136,6 +136,24 @@ NOT like this:
 | Local | `http://localhost:5185` |  ← URLs not clickable!
 ```
 
+## Creating a Pull Request
+
+```bash
+# Create PR with auto-generated title and preview URL
+zdev pr -p /path/to/project
+
+# Create PR with custom title
+zdev pr -p /path/to/project --title "Add user authentication"
+
+# Create draft PR
+zdev pr -p /path/to/project --draft
+
+# Open PR in browser instead of CLI
+zdev pr -p /path/to/project --web
+```
+
+The PR body automatically includes the preview URL.
+
 ## After PR is Merged
 
 ```bash
@@ -154,6 +172,7 @@ This removes the worktree, Traefik route, and port allocation.
 | Configure | `zdev config --list` |
 | See what's running | `zdev list` |
 | Start feature | `zdev start NAME -p PATH` |
+| Create PR | `zdev pr -p PATH` |
 | Stop (keep files) | `zdev stop NAME -p PATH --keep` |
 | Stop (full) | `zdev stop NAME -p PATH` |
 | Remove after merge | `zdev clean NAME -p PATH` |
