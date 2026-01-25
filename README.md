@@ -1,6 +1,6 @@
 # zdev-skill
 
-Agent skill for [zdev](https://github.com/Workstellar-ApS/zdev) — multi-agent worktree development environment.
+Agent skill for [zdev](https://github.com/5hanth/zdev) — multi-agent worktree development environment.
 
 ## What is this?
 
@@ -62,12 +62,12 @@ Use zdev clean to remove the add-auth worktree after the PR is merged.
 
 ## Requirements
 
-- [zdev](https://github.com/Workstellar-ApS/zdev) CLI installed
+- [zdev](https://github.com/5hanth/zdev) CLI installed
 - [Bun](https://bun.sh) runtime
 
 ## Related
 
-- [zdev](https://github.com/Workstellar-ApS/zdev) — The CLI tool
+- [zdev](https://github.com/5hanth/zdev) — The CLI tool
 - [Clawdbot](https://docs.clawd.bot) — AI agent platform
 - [Claude Code](https://claude.ai) — Anthropic's coding agent
 
