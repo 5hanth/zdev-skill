@@ -120,11 +120,21 @@ cd ~/.zdev/worktrees/project-feature
 
 ## Presenting Output
 
-When showing zdev output to users, always format URLs as clickable links:
-- Local: `http://localhost:5185`
-- Public: `https://project-feature.dev.example.com`
+When showing zdev output to users:
+- **Never put URLs inside markdown tables or code blocks** — they won't be clickable
+- Place URLs on their own line as plain text
+- Use bold labels before URLs, not inline formatting
 
-On Telegram/Discord, URLs are auto-linked. Ensure they're on their own line or clearly visible.
+Example:
+```
+**Local:** http://localhost:5185
+**Public:** https://project-feature.dev.example.com
+```
+
+NOT like this:
+```
+| Local | `http://localhost:5185` |  ← URLs not clickable!
+```
 
 ## After PR is Merged
 

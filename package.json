@@ -1,6 +1,6 @@
 {
   "name": "zdev-skill",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Agent skill for zdev - multi-agent worktree development",
   "license": "WTFPL",
   "repository": {
