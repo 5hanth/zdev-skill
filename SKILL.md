@@ -118,6 +118,14 @@ zdev start <feature-name> -p /path/to/project
 cd ~/.zdev/worktrees/project-feature
 ```
 
+## Presenting Output
+
+When showing zdev output to users, always format URLs as clickable links:
+- Local: `http://localhost:5185`
+- Public: `https://project-feature.dev.example.com`
+
+On Telegram/Discord, URLs are auto-linked. Ensure they're on their own line or clearly visible.
+
 ## After PR is Merged
 
 ```bash
