@@ -1,3 +1,8 @@
+---
+name: zdev
+description: Manage isolated dev environments with git worktrees, auto ports, and preview URLs
+---
+
 # zdev Skill
 
 Use `zdev` to manage isolated development environments when working on features. Each feature gets its own git worktree, ports, and optional public preview URL.
