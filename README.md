@@ -11,7 +11,7 @@ This skill teaches AI coding agents (Claude Code, Clawdbot, etc.) how to use `zd
 ### Claude Code
 
 ```bash
-npx add-skill Workstellar-ApS/zdev-skill
+npx add-skill 5hanth/zdev-skill
 ```
 
 Then in Claude Code:
@@ -23,7 +23,7 @@ Then in Claude Code:
 
 Add to your Clawdbot skills directory:
 ```bash
-git clone https://github.com/Workstellar-ApS/zdev-skill ~/.clawdbot/skills/zdev
+git clone https://github.com/5hanth/zdev-skill ~/.clawdbot/skills/zdev
 ```
 
 ### Other Agents
