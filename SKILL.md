@@ -188,3 +188,5 @@ This removes the worktree, Traefik route, and port allocation.
 **No public URL** → Run `zdev config --set devDomain=dev.example.com` first.
 
 **Convex not working** → Run `bunx convex dev` once in the main project first to select a Convex project.
+
+**Vite "host not allowed" / 403 on preview URL** → `zdev start` auto-patches `vite.config.ts` with `server.allowedHosts` using the configured `devDomain`. If it didn't work: check `zdev config --list` has `devDomain` set, and that your vite config uses `defineConfig({})` or `export default {}`.
